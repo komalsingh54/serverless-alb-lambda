@@ -1,17 +1,11 @@
-# serverless-load-balancer
-serverless framework sample that shows how to deploy a load balancer (with vpc/subnet configuration) connected to a lambda in aws.
+# Serverless backend with ALB 
+serverless framework with a load balancer (with vpc/subnet configuration) connected to a lambda in aws.
 
 - creates a LoadBalancer, HTTP Listener and Lambda
 - links the Listener and Lambda
 - stores the LoadBalancerDNSName (url) in ParameterStore
-
-This feature has been introduced in v 1.45 and extended in 1.46 serverless framework
-- [see changelog](https://github.com/serverless/serverless/blob/master/CHANGELOG.md#1450-2019-06-12)
-
-
-**when to use load balancer instead of api gateway ?**
-- https://serverless-training.com/articles/save-money-by-replacing-api-gateway-with-application-load-balancer/
-- https://serverless-training.com/articles/api-gateway-vs-application-load-balancer-technical-details/
+![](https://api-alb-lambda.s3.amazonaws.com/aws-alb-lambda.svg)
+https://api-alb-lambda.s3.amazonaws.com/aws-alb-lambda.svg
 
 ## Install Requirements
 ```
@@ -22,7 +16,8 @@ npm install
 ## Modify Config
 Modify the file **/config/serverless.config.yml** 
 - VPC / Subnet configuration for load balancer
-- Scheme for load balancer ([see aws documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/how-elastic-load-balancing-works.html#load-balancer-scheme))
+- Scheme for load balancer 
+
 ```yaml
     VPC_ID: 'vpc-xxxxxxxxx'
     SUBNET_ID_A: "subnet-xxxxxxxxx"
@@ -57,9 +52,3 @@ ServerlessDeploymentBucketName: serverless-load-balancer-serverlessdeploymentbuc
 ```
     Successfully executed lambda call via loadbalancer
 ```
-
-## Additional things to know
-
-- This sample does not care if the lambda and the load balancer are both in a vpc. It could be mixed in anyway dependent of the use case
-
-- The load balancer url will be stored as Parameter in Parameter store. This helps to reference the loadbalancer url easily tool-independent in other stacks.
