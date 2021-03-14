@@ -5,7 +5,7 @@ serverless framework with a load balancer (with vpc/subnet configuration) connec
 - links the Listener and Lambda
 - stores the LoadBalancerDNSName (url) in ParameterStore
 ![](https://api-alb-lambda.s3.amazonaws.com/aws-alb-lambda.svg)
-https://api-alb-lambda.s3.amazonaws.com/aws-alb-lambda.svg
+
 
 ## Install Requirements
 ```
