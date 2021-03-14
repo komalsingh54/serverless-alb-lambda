@@ -1,5 +1,5 @@
-VPC_ID: 'vpc-2a3c0650'
-SUBNET_ID_A: "subnet-466d8619"
-SUBNET_ID_B: "subnet-7dfc121b"
-SUBNET_ID_C: "subnet-ac5eab8d"
+VPC_ID: 'vpc-135deb6e'
+SUBNET_ID_A: "subnet-de4d2dff"
+SUBNET_ID_B: "subnet-f15065bc"
+SUBNET_ID_C: "subnet-b03056ef"
 SCHEME: "internet-facing"

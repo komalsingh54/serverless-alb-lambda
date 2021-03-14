@@ -10,7 +10,7 @@ provider:
   stage: dev
   memorySize: 256
   deploymentBucket:
-    name: api-alb-lambda 
+    name: api-alb-lambda1
 custom:
    file: ${file(./config/serverless.config.yml)} 
 functions:
@@ -24,6 +24,17 @@ functions:
             path: /
             method:
                - GET
+
+  test: 
+    handler: testHandler.handler
+    events:
+      - alb:
+          listenerArn: { Ref: HTTPListener }
+          priority: 10
+          conditions:
+            path: /test
+            method:
+                - GET
 resources:
    Outputs:
       LoadBalancerDNSName:
@@ -90,3 +101,5 @@ resources:
             Type: "String"
             Value: !GetAtt LoadBalancer.DNSName
             Description: "loadbalancer url"
+
+   
