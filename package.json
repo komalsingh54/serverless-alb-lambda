@@ -1,5 +1,5 @@
 {
-  "name": "serverless-load-balancer",
+  "name": "serverless-alb-lambda",
   "version": "1.0.0",
   "description": "serverless framework sample that shows how to combine a load balancer with a lambda",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pharindoko/serverless-load-balancer.git"
+    "url": "git+https://github.com/komalsingh54/serverless-alb-lambda.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pharindoko/serverless-load-balancer/issues"
+    "url": "https://github.com/komalsingh54/serverless-alb-lambda/issues"
   },
-  "homepage": "https://github.com/pharindoko/serverless-load-balancer#readme",
+  "homepage": "https://github.com/komalsingh54/serverless-alb-lambda#readme",
   "dependencies": {
     "serverless-pseudo-parameters": "^2.4.0"
   }
